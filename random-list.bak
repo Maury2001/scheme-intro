@@ -1,0 +1,10 @@
+#lang racket
+
+(define (random-element lst)
+  (list-ref lst (random (length lst))))
+
+;lst
+
+(define my-list '(rock paper scissors))
+(define choice (random-element my-list))
+(display choice )
