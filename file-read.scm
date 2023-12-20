@@ -23,3 +23,13 @@
 (define content (read-file file))
 (string? content)
 (display content)
+
+(define inport (open-input-file "files.py"))
+(let loop ()
+  (let ((char (read-char inport)))
+    (if (not (eof-object? char))
+        (begin
+          (display char)
+          (newline)
+          (loop))
+        (close-input-port inport))))

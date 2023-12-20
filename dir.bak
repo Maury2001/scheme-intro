@@ -1,0 +1,3 @@
+#lang racket
+(define inport (open-input-file "mesh/documents/Schemefiles.py"))
+(read-char inport)
